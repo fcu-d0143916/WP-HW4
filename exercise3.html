@@ -1,0 +1,104 @@
+﻿<!doctor html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Exercise3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script>
+   $(document).ready(function(){
+
+    $("#hide").click(function(){
+        $("img").hide(1000);
+       });
+
+    $("#show").click(function(){
+        $("img").show(1000);
+       });
+
+    $("#toggle").click(function(){
+        $("img").toggle(1000);
+       });
+
+    $("#fade").click(function(){
+        $("#img1").fadeToggle(1000);
+        $("#img2").fadeToggle(2000);
+        $("#img3").fadeToggle(3000);
+        $("#img1").fadeToggle(500);
+        $("#img2").fadeToggle(1000);
+        $("#img3").fadeToggle(1500);
+    });
+
+    $("#fadeto").click(function(){
+        $("#img1").fadeTo("show",0);
+        $("#img1").fadeTo("show",1);
+        $("#img1").fadeTo("show",0);
+        $("#img1").fadeTo("show",1);
+        $("#img1").fadeTo("show",0);
+        $("#img1").fadeTo("show",1);
+        $("#img2").fadeTo("show",0);
+        $("#img2").fadeTo("show",1);
+        $("#img2").fadeTo("show",0);
+        $("#img2").fadeTo("show",1);
+        $("#img3").fadeTo("show",0);
+        $("#img3").fadeTo("show",1);
+    });
+
+    $("#go").click(function(){
+        $("img").animate({height: '+=50px'});
+    });
+
+    $("#back").click(function(){
+        $("img").animate({height: '-=50px'});
+    });
+
+    $("#showtime").click(function(){
+        $("#img1").animate({opacity: '0'});
+        $("#img1").animate({opacity: '1'});
+        $("#img2").animate({opacity: '0'});
+        $("#img2").animate({opacity: '1'});
+        $("#img3").animate({opacity: '0'});
+        $("#img3").animate({opacity: '1'});
+        $("#img1").animate({opacity: '0',height: '+=50px'});
+        $("#img1").animate({opacity: '1'});
+        $("#img2").animate({opacity: '0'});
+        $("#img2").animate({opacity: '1'});
+        $("#img3").animate({opacity: '0',height: '-=50px'});
+        $("#img3").animate({opacity: '1'});
+        $("#img1").animate({opacity: '0',height: '-=100px'});
+        $("#img1").animate({opacity: '1'});
+        $("#img2").animate({opacity: '0'});
+        $("#img2").animate({opacity: '1'});
+        $("#img3").animate({opacity: '0',height: '+=100px'});
+        $("#img3").animate({opacity: '1'});
+        $("#img1").animate({opacity: '0',height: '+=50px'});
+        $("#img1").animate({opacity: '1'});
+        $("#img2").animate({opacity: '0'});
+        $("#img2").animate({opacity: '1'});
+        $("#img3").animate({opacity: '0',height: '-=50px'});
+        $("#img3").animate({opacity: '1'});
+    });
+   });
+  </script>
+
+ </head>
+ 
+ <body>
+  <h1>Web Programing</h1>
+  <p>Web Programing</p>
+  <button id="hide">隱藏</button>
+  <button id="show">出現</button>
+  <button id="toggle">點擊後隱藏或出現</button>
+  <button id="fade">淡出淡入</button>
+  <button id="fadeto">閃爍</button>
+  <button id="go">變大</button>
+  <button id="back">變小</button>
+  <button id="showtime">動畫</button>
+  <br></br>
+  <img id="img1" src ="MyPic.jpg" alt="MyWeb"></img>
+  <img id="img2" src ="MyPic.jpg" alt="MyWeb"></img>
+  <img id="img3" src ="MyPic.jpg" alt="MyWeb"></img>
+ </body>
+
+</html>
